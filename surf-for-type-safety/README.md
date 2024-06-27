@@ -1,81 +1,48 @@
-# Turborepo starter
+> **_NOTE:_** Use the Wallet Adapter v2.0.0 and up with the new Aptos TypeScript SDK [@aptos-labs/ts-sdk](https://www.npmjs.com/package/@aptos-labs/ts-sdk)
 
-This is an official starter Turborepo.
+# Aptos Wallet Adapter
 
-## Using this example
+A monorepo modular wallet adapter developed and maintained by Aptos for wallet and dapp builders that includes:
 
-Run the following command:
+#### Getting Started
 
-```sh
-npx create-turbo@latest
-```
+- [Example app](https://github.com/aptos-labs/aptos-wallet-adapter/tree/main/apps/nextjs-example)
+- [For Aptos Dapps](https://github.com/aptos-labs/aptos-wallet-adapter/tree/main/packages/wallet-adapter-react)
+- [For Aptos Wallets](https://github.com/aptos-labs/wallet-adapter-plugin-template)
+- [Core package](https://github.com/aptos-labs/aptos-wallet-adapter/tree/main/packages/wallet-adapter-core)
+- [Wallet connect UI package](https://github.com/aptos-labs/aptos-wallet-adapter/tree/main/packages/wallet-adapter-ant-design)
 
-## What's inside?
+#### Supported wallet packages
 
-This Turborepo includes the following packages/apps:
+Note: These are in alphabetical order, any new wallets must be in alphabetical order
 
-### Apps and Packages
+[AIP-62](https://github.com/aptos-foundation/AIPs/blob/main/aips/aip-62.md) standard compatible
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- [AptosConnect](https://aptosconnect.app/)
+- [Nightly](https://chromewebstore.google.com/detail/nightly/fiikommddbeccaoicoejoniammnalkfa)
+- [Petra](https://chromewebstore.google.com/detail/petra-aptos-wallet/ejjladinnckdgjemekebdpeokbikhfci?hl=en)
+- T wallet
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Legacy standard compatible
 
-### Utilities
+- [BitgetWallet](https://www.npmjs.com/package/@bitget-wallet/aptos-wallet-adapter)
+- [Fewcha](https://www.npmjs.com/package/fewcha-plugin-wallet-adapter)
+- [Martian](https://www.npmjs.com/package/@martianwallet/aptos-wallet-adapter)
+- [MSafe](https://www.npmjs.com/package/@msafe/aptos-wallet-adapter)
+- [Pontem](https://www.npmjs.com/package/@pontem/wallet-adapter-plugin)
+- [OKX](https://www.npmjs.com/package/@okwallet/aptos-wallet-adapter)
+- [Trust](https://www.npmjs.com/package/@trustwallet/aptos-wallet-adapter)
 
-This Turborepo has some additional tools already setup for you:
+#### Develop Locally
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+You would need `pnpm@7.14.2` in order to bootstrap and test a local copy of this repo.
 
-### Build
+1. Clone the repo with `git clone https://github.com/aptos-labs/aptos-wallet-adapter.git`
+2. On the root folder, run `pnpm install` and `pnpm turbo run build`
+3. On the root folder, run `pnpm turbo run dev` - that would spin up a local server (`localhost:3000`) with the `nextjs` demoapp
 
-To build all apps and packages, run the following command:
+Looking how you can contribute? Take a look at our [contribution guide](./CONTRIBUTING.md)
 
-```
-cd my-turborepo
-pnpm build
-```
+#### Terms of Use and Privacy Policy
 
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+By accessing or using the wallet adapter, you agree to be bound to the Aptos Labs [Terms of Use](https://aptoslabs.com/terms) and [Privacy Policy](https://aptoslabs.com/privacy).

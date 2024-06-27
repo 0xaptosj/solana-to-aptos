@@ -1,22 +1,19 @@
 "use client";
 
-import { useToast } from "@/components/ui/use-toast";
 import { AptosWalletAdapterProvider } from "@aptos-labs/wallet-adapter-react";
+import { PropsWithChildren } from "react";
 import { Network } from "@aptos-labs/ts-sdk";
-import { Toaster } from "@/components/ui/toaster";
-import { RootHeader } from "@/components/RootHeader";
+import { useAutoConnect } from "./AutoConnectProvider";
+import { useToast } from "./ui/use-toast";
 
-export function WalletProvider({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const WalletProvider = ({ children }: PropsWithChildren) => {
+  const { autoConnect } = useAutoConnect();
   const { toast } = useToast();
 
   return (
     <AptosWalletAdapterProvider
-      autoConnect={true}
-      dappConfig={{ network: Network.TESTNET }}
+      autoConnect={autoConnect}
+      dappConfig={{ network: Network.DEVNET }}
       onError={(error) => {
         toast({
           variant: "destructive",
@@ -25,9 +22,7 @@ export function WalletProvider({
         });
       }}
     >
-      <RootHeader />
       {children}
-      <Toaster />
     </AptosWalletAdapterProvider>
   );
-}
+};

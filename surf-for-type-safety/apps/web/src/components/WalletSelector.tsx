@@ -3,6 +3,7 @@
 import {
   APTOS_CONNECT_ACCOUNT_URL,
   AnyAptosWallet,
+  AptosPrivacyPolicy,
   WalletItem,
   getAptosConnectWallets,
   isAptosConnectWallet,
@@ -13,27 +14,26 @@ import {
 } from "@aptos-labs/wallet-adapter-react";
 import { ChevronDown, Copy, LogOut, User } from "lucide-react";
 import { useCallback, useState } from "react";
-
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+} from "./ui/collapsible";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "./ui/dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { useToast } from "@/components/ui/use-toast";
+} from "./ui/dropdown-menu";
+import { useToast } from "./ui/use-toast";
 
 export function WalletSelector() {
   const { account, connected, disconnect, wallet } = useWallet();
@@ -135,6 +135,14 @@ function ConnectWalletDialog({ close }: ConnectWalletDialogProps) {
           />
         ))}
       </div>
+      <AptosPrivacyPolicy className="flex flex-col items-center">
+        <p className="text-xs leading-5">
+          <AptosPrivacyPolicy.Disclaimer />{" "}
+          <AptosPrivacyPolicy.Link className="text-muted-foreground underline underline-offset-4" />
+          <span className="text-muted-foreground">.</span>
+        </p>
+        <AptosPrivacyPolicy.PoweredBy className="flex gap-1.5 items-center text-xs leading-5 text-muted-foreground" />
+      </AptosPrivacyPolicy>
       <div className="flex items-center gap-3 pt-4 text-muted-foreground">
         <div className="h-px w-full bg-secondary" />
         Or

@@ -1,24 +1,28 @@
 {
-  "name": "surf-for-type-safety",
+  "name": "aptos-full-stack-template",
+  "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "prettier": "^3.2.5",
-    "turbo": "^2.0.5",
-    "typescript": "^5.4.5"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "npm@9.6.3",
+  "license": "Apache-2.0",
   "workspaces": [
     "apps/*",
     "packages/*",
     "contracts/*"
-  ]
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@repo/eslint-config-adapter": "*",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "npm@9.6.3"
 }

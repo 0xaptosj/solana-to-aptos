@@ -1,5 +1,5 @@
 {
-  "name": "message-board-contract",
+  "name": "@repo/message-board-contract",
   "version": "0.1.0",
   "private": true,
   "scripts": {
