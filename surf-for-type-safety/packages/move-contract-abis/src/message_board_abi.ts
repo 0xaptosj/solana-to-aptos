@@ -1,5 +1,5 @@
 export const ABI = {
-  address: "0x6fc9d69553673427eaaed0e1a81a97d0de02ecb017958ddd2f90d6f219d8498a",
+  address: "0x6b3c4116b76752fab7caf18641ea2fe886f984bc725c95a2a4c3a18065e1cd8b",
   name: "message_board",
   friends: [],
   exposed_functions: [
@@ -10,7 +10,7 @@ export const ABI = {
       is_view: true,
       generic_type_params: [],
       params: [
-        "0x1::object::Object<0x6fc9d69553673427eaaed0e1a81a97d0de02ecb017958ddd2f90d6f219d8498a::message_board::Message>",
+        "0x1::object::Object<0x6b3c4116b76752fab7caf18641ea2fe886f984bc725c95a2a4c3a18065e1cd8b::message_board::Message>",
       ],
       return: [
         "0x1::string::String",
@@ -28,10 +28,10 @@ export const ABI = {
       is_view: true,
       generic_type_params: [],
       params: [
-        "0x1::object::Object<0x6fc9d69553673427eaaed0e1a81a97d0de02ecb017958ddd2f90d6f219d8498a::message_board::Message>",
+        "0x1::object::Object<0x6b3c4116b76752fab7caf18641ea2fe886f984bc725c95a2a4c3a18065e1cd8b::message_board::Message>",
       ],
       return: [
-        "0x6fc9d69553673427eaaed0e1a81a97d0de02ecb017958ddd2f90d6f219d8498a::message_board::Message",
+        "0x6b3c4116b76752fab7caf18641ea2fe886f984bc725c95a2a4c3a18065e1cd8b::message_board::Message",
       ],
     },
     {
@@ -42,7 +42,7 @@ export const ABI = {
       generic_type_params: [],
       params: ["0x1::option::Option<u64>", "0x1::option::Option<u64>"],
       return: [
-        "vector<0x1::object::Object<0x6fc9d69553673427eaaed0e1a81a97d0de02ecb017958ddd2f90d6f219d8498a::message_board::Message>>",
+        "vector<0x1::object::Object<0x6b3c4116b76752fab7caf18641ea2fe886f984bc725c95a2a4c3a18065e1cd8b::message_board::Message>>",
       ],
     },
     {
@@ -92,7 +92,7 @@ export const ABI = {
       fields: [
         {
           name: "messages",
-          type: "vector<0x1::object::Object<0x6fc9d69553673427eaaed0e1a81a97d0de02ecb017958ddd2f90d6f219d8498a::message_board::Message>>",
+          type: "vector<0x1::object::Object<0x6b3c4116b76752fab7caf18641ea2fe886f984bc725c95a2a4c3a18065e1cd8b::message_board::Message>>",
         },
       ],
     },

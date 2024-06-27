@@ -1,0 +1,24 @@
+{
+  "name": "@repo/node_script",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "get-messages": "ts-node-esm src/get_messages.ts",
+    "get-message-struct": "ts-node-esm src/get_message_struct.ts",
+    "get-message-content": "ts-node-esm src/get_message_content.ts",
+    "post-message": "ts-node-esm src/post_message.ts"
+  },
+  "dependencies": {
+    "@repo/move-contract-abis": "*",
+    "@aptos-labs/ts-sdk": "^1.22.2",
+    "@thalalabs/surf": "^1.6.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config-adapter": "*",
+    "@repo/tsconfig": "*",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.0-rc.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}

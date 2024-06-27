@@ -1,6 +1,6 @@
 {
   "name": "aptos-full-stack-template",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "license": "Apache-2.0",
   "workspaces": [
@@ -14,7 +14,12 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "turbo run clean && rm -rf node_modules"
+    "clean": "turbo run clean && rm -rf node_modules",
+    "move:init": "npm run init -w @repo/message-board-contract",
+    "move:test": "npm run test -w @repo/message-board-contract",
+    "move:publish": "npm run publish -w @repo/message-board-contract",
+    "move:upgrade": "npm run upgrade -w @repo/message-board-contract",
+    "move:get-abis": "npm run get-abis -w @repo/move-contract-abis"
   },
   "devDependencies": {
     "@repo/eslint-config-adapter": "*",
