@@ -19,7 +19,11 @@
     "move:test": "npm run test -w @repo/message-board-contract",
     "move:publish": "npm run publish -w @repo/message-board-contract",
     "move:upgrade": "npm run upgrade -w @repo/message-board-contract",
-    "move:get-abis": "npm run get-abis -w @repo/move-contract-abis"
+    "move:get-abis": "npm run get-abis -w @repo/move-contract-abis",
+    "script:post-message": "npm run post-message -w @repo/node-script",
+    "script:get-messages": "npm run get-messages -w @repo/node-script",
+    "script:get-message-content": "npm run get-message-content -w @repo/node-script",
+    "script:get-message-struct": "npm run get-message-struct -w @repo/node-script"
   },
   "devDependencies": {
     "@repo/eslint-config-adapter": "*",

@@ -2,7 +2,7 @@ import { client } from "./utils";
 
 const run = async () => {
   const messageObjAddr =
-    "0xd3d7eef905b8b3a5cf32fb5fc4711c5360ff12c1e775863b4a896c705c9cd5f7";
+    "0x535a99e8ebf445dbc5da319cf6e400d79cda9d32bf65eff018e3de5173258efc";
   client.view
     .get_message_content({
       typeArguments: [],

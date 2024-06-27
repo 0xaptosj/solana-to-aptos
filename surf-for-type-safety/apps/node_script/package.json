@@ -1,12 +1,12 @@
 {
-  "name": "@repo/node_script",
+  "name": "@repo/node-script",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "get-messages": "ts-node-esm src/get_messages.ts",
-    "get-message-struct": "ts-node-esm src/get_message_struct.ts",
-    "get-message-content": "ts-node-esm src/get_message_content.ts",
-    "post-message": "ts-node-esm src/post_message.ts"
+    "get-messages": "ts-node src/get_messages.ts",
+    "get-message-struct": "ts-node src/get_message_struct.ts",
+    "get-message-content": "ts-node src/get_message_content.ts",
+    "post-message": "ts-node src/post_message.ts"
   },
   "dependencies": {
     "@repo/move-contract-abis": "*",
