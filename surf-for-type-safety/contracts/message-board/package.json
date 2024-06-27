@@ -1,0 +1,13 @@
+{
+  "name": "message-board-contract",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "init": "./sh_scripts/init.sh",
+    "test": "./sh_scripts/test.sh",
+    "publish": "./sh_scripts/publish.sh",
+    "upgrade": "./sh_scripts/upgrade.sh"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

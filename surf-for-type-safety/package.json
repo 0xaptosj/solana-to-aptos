@@ -18,6 +18,7 @@
   "packageManager": "npm@9.6.3",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "contracts/*"
   ]
 }
