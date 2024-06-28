@@ -1,0 +1,11 @@
+{
+  "extends": "@repo/tsconfig/base.json",
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"],
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es2020", "dom"],
+    "rootDir": "src",
+    "outDir": "dist"
+  }
+}

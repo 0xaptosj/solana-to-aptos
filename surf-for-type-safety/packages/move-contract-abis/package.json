@@ -1,0 +1,10 @@
+{
+  "name": "@repo/move-contract-abis",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "get-abis": "./get_abis.sh"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
